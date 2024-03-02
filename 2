@@ -1,0 +1,40 @@
+package sd;
+
+public class Sd {
+    public static void main(String[] args) {
+      // Membuat array 1 dimensi bertipe data primitif
+        int[] dataArray = {8, 1, 2, 0, 3};
+        // Metode 1: Menggunakan for loop
+        System.out.println("Metode 1: Menggunakan for loop");
+        for (int i = 0; i < dataArray.length; i++) {
+            System.out.print(dataArray[i] + " ");
+        }
+        System.out.println();
+
+        // Metode 2: Menggunakan enhanced for loop
+        System.out.println("Metode 2: Menggunakan enhanced for loop");
+        for (int num : dataArray) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        // Metode 3: Menggunakan Arrays.toString()
+        System.out.println("Metode 3: Menggunakan Arrays.toString()");
+        System.out.println(java.util.Arrays.toString(dataArray));
+
+        // Metode 4: Menggunakan Stream API (Java 8+)
+        System.out.println("Metode 4: Menggunakan Stream API");
+        java.util.Arrays.stream(dataArray).forEach(num -> System.out.print(num + " "));
+        System.out.println();
+
+        // Metode 5: Menggunakan StringJoiner (Java 8+)
+        System.out.println("Metode 5: Menggunakan StringJoiner");
+        java.util.StringJoiner joiner = new java.util.StringJoiner(", ", "[", "]");
+        for (int num : dataArray) {
+            joiner.add(String.valueOf(num));
+        }
+        System.out.println(joiner.toString());
+
+    }
+    
+}
