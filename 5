@@ -1,0 +1,39 @@
+package sd5;
+
+import java.util.ArrayList;
+
+public class Sd5 {
+    public static void main(String[] args) {
+       
+        // Membuat ArrayList dengan tipe data Integer
+        ArrayList<Integer> arrayList = new ArrayList<>();
+
+        // Menambahkan nilai ke dalam ArrayList
+        arrayList.add(10);
+        arrayList.add(20);
+        arrayList.add(30);
+        arrayList.add(40);
+        arrayList.add(50);
+
+        // Mengakses nilai pada index tertentu
+        System.out.println("Nilai pada index ke-2: " + arrayList.get(2));
+
+        // Mengganti nilai pada index tertentu
+        arrayList.set(2, 100);
+
+        // Menghapus nilai pada index tertentu
+        arrayList.remove(3);
+
+        // Mencetak isi ArrayList setelah penggantian dan penghapusan
+        System.out.println("Isi ArrayList setelah penggantian dan penghapusan:");
+        for (Integer value : arrayList) {
+            System.out.println(value);
+        }
+
+        // Membaca ukuran ArrayList
+        System.out.println("Ukuran ArrayList: " + arrayList.size());
+    }
+}
+
+   
+    
